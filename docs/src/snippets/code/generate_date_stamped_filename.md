@@ -1,9 +1,5 @@
 ## Snippet: Generate_date-stamped_filename
 
-<div class="warning">
-    **Warning:** Do not modify this file.
-</div>
-
 ```rust
 let now = chrono::Local::now();
             let date_str = now.format("%Y-%m-%d").to_string();

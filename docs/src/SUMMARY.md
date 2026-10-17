@@ -50,20 +50,6 @@
 # Security
 - [Tls Requirements]( security/tls_requirements.md)
 
-# Blackbox
-- [Blackbox Documentation](blackbox/README.md)
-- [SecurityLab](blackbox/security-lab/README.md)
-- [Architecture](blackbox/security-lab/00-overview/architecture.md)
-- [Storage Layout](blackbox/security-lab/01-storage/layout.md)
-- [Container Policy](blackbox/security-lab/02-containers/policy.md)
-- [Virtual-Machine Runbook](blackbox/security-lab/03-virtual-machines/runbook.md)
-- [OSINT Workflow](blackbox/security-lab/04-osint/workflow.md)
-- [Script and Repository Review](blackbox/security-lab/05-review/script-review.md)
-- [Backup Boundaries](blackbox/security-lab/06-backup/boundaries.md)
-- [Incident Response](blackbox/security-lab/07-operations/incident-response.md)
-- [Bitwarden and Blackbox TUI](blackbox/security-lab/08-secrets/bitwarden-tui.md)
-- [SSH Lockdown](blackbox/security-lab/10-ssh/lockdown.md)
-
 # Tasks & To-Do
 - [Database Optimization]( tasks/todo/database_optimization.md)
 
@@ -88,5 +74,16 @@
 - [API ROUTES]( api/API_ROUTES.md)
 
 # Miscellaneous
+- [Architecture]( blackbox/security-lab/00-overview/architecture.md)
+- [Bitwarden-tui]( blackbox/security-lab/08-secrets/bitwarden-tui.md)
+- [Boundaries]( blackbox/security-lab/06-backup/boundaries.md)
 - [ENV VARS]( env/ENV_VARS.md)
+- [Incident-response]( blackbox/security-lab/07-operations/incident-response.md)
 - [Introduction]( introduction.md)
+- [Layout]( blackbox/security-lab/01-storage/layout.md)
+- [Lockdown]( blackbox/security-lab/10-ssh/lockdown.md)
+- [Policy]( blackbox/security-lab/02-containers/policy.md)
+- [Run]( run.md)
+- [Runbook]( blackbox/security-lab/03-virtual-machines/runbook.md)
+- [Script-review]( blackbox/security-lab/05-review/script-review.md)
+- [Workflow]( blackbox/security-lab/04-osint/workflow.md)
