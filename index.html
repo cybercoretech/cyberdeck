@@ -27,9 +27,99 @@
     footer{padding:28px 0 38px;border-top:1px solid var(--line);color:var(--dim);font:10px var(--mono)}.footer-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px}.footer-mark{color:var(--muted)}.footer-mark span{color:var(--amber)}.footer-links{display:flex;flex-wrap:wrap;gap:19px}.footer-links a:hover{color:var(--cyan)}
     @media(max-width:950px){.hero-grid,.pipeline{grid-template-columns:1fr;gap:48px}.deck{max-width:780px}.cards{grid-template-columns:repeat(2,1fr)}}@media(max-width:680px){.wrap{width:min(100% - 28px,1180px)}.nav{height:67px}.nav nav{gap:12px}.nav nav a:not(.nav-github){display:none}.hero{padding-top:59px}.hero-copy{font-size:15px}.stats-grid{grid-template-columns:repeat(2,1fr)}.stat:nth-child(3){border-left:1px solid var(--line)}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}section{padding:76px 0}.cards,.screen-grid{grid-template-columns:1fr;margin-top:31px}.card{min-height:auto}.deck-body{grid-template-columns:1fr;font-size:10px}.deck-nav{border-right:0;border-bottom:1px solid var(--line2)}.deck-detail{min-height:250px}.deck-foot{gap:8px;font-size:8px}.install-box{flex-direction:column}.copy{align-self:stretch}.footer-row{align-items:flex-start;flex-direction:column}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
   </style>
+  <link rel="stylesheet" href="https://cybercoretech.github.io/kit/chooser.css">
+  <style>
+    cybercore-theme-chooser{--ccx-bg:var(--panel);--ccx-fg:var(--text);--ccx-line:var(--line);--ccx-accent:var(--pink);--ccx-focus:var(--cyan);--ccx-field:var(--void);--ccx-muted:var(--muted);--ccx-button-bg:transparent;--ccx-button-border:var(--line);--ccx-radius:0px;--ccx-button-width:auto;--ccx-height:2.25rem;--ccx-glow:.5;}
+  </style>
+  <script>window.SITE = Object.assign(window.SITE || {}, {"siteLabel": "Cyberdeck", "themeVars": {"bg": "--void", "white": "--text", "acid_green": "--amber"}});</script>
+  <script type="module" src="https://cybercoretech.github.io/kit/chooser.js"></script>
+  <style id="cc-mobile-first">
+/* Mobile floor (phones + tablets): readable text and finger-sized targets.
+   Generated per range from what renders under 11px / 24px; desktop untouched. */
+@media (max-width: 600px) {
+  div.release > span,
+  div.deck-title,
+  div.pulse,
+  div.deck-tab,
+  p.label,
+  div.deck-row,
+  div.detail-line,
+  div.detail-line > b,
+  p.detail-line,
+  p.deck-note,
+  div.deck-action,
+  div.deck-foot > span,
+  span > b,
+  span.stat-index,
+  small,
+  figcaption,
+  figcaption > b,
+  #copy-command,
+  div.install-meta > span,
+  div.footer-mark,
+  div.footer-mark > span,
+  div.footer-links > a,
+  div.footer-links > span { font-size: 11px !important; }
+}
+@media (min-width: 601px) and (max-width: 860px) {
+  div.release > span,
+  div.deck-title,
+  div.pulse,
+  div.deck-tab,
+  p.label,
+  div.deck-foot > span,
+  span > b,
+  span.stat-index,
+  small,
+  figcaption,
+  figcaption > b,
+  #copy-command,
+  div.install-meta > span,
+  div.footer-mark,
+  div.footer-mark > span,
+  div.footer-links > a,
+  div.footer-links > span { font-size: 11px !important; }
+}
+@media (min-width: 861px) and (max-width: 1024px) {
+  div.release > span,
+  div.deck-title,
+  div.pulse,
+  div.deck-tab,
+  p.label,
+  div.deck-foot > span,
+  span > b,
+  span.stat-index,
+  small,
+  figcaption,
+  figcaption > b,
+  #copy-command,
+  div.install-meta > span,
+  div.footer-mark,
+  div.footer-mark > span,
+  div.footer-links > a,
+  div.footer-links > span { font-size: 11px !important; }
+}
+@media (pointer: coarse) {
+  div.footer-links > a { min-height: 24px; min-width: 24px; }
+}
+/* Layout fixes: phones and tablets only; laptops and desktops untouched. */
+@media (max-width: 1024px) {
+  /* Mobile first: nothing may make the page wider than the screen.
+     Grid/flex columns may shrink below their widest line; code scrolls in place. */
+  pre { max-width: 100%; overflow-x: auto; }
+  img, video { max-width: 100%; height: auto; }
+  div.wrap > * { min-width: 0; }
+  div.deck-head > * { min-width: 0; }
+  div.deck-tabs > * { min-width: 0; }
+  div.deck-body > * { min-width: 0; }
+  div.deck-nav > div.deck-row { white-space: normal; overflow-wrap: anywhere; }
+  /* Long paths and URLs in inline code may break anywhere instead of widening the page. */
+  :not(pre) > code { overflow-wrap: anywhere; }
+}
+  </style>
 </head>
 <body>
-  <header><div class="wrap nav"><a class="brand" href="#top" aria-label="Cyberdeck home"><img src="assets/brand/cyberdeck-favicon.svg" alt=""><b>CYBER<span>DECK</span></b></a><nav aria-label="Primary navigation"><a href="#domains">Domains</a><a href="#evidence">Screens</a><a href="#pipeline">Pipeline</a><a href="#install">Run it</a><a class="nav-github" href="https://github.com/cybercoretech/cyberdeck">GitHub ↗</a><a href="https://cybercoretech.github.io/cybercore/docs.html">MASTER DOCS ↗</a></nav></div></header>
+  <header><div class="wrap nav"><a class="brand" href="#top" aria-label="Cyberdeck home"><img src="assets/brand/cyberdeck-favicon.svg" alt=""><b>CYBER<span>DECK</span></b></a><nav aria-label="Primary navigation"><a href="#domains">Domains</a><a href="#evidence">Screens</a><a href="#pipeline">Pipeline</a><a href="#install">Run it</a><a class="nav-github" href="https://github.com/cybercoretech/cyberdeck">GitHub ↗</a><a href="https://cybercoretech.github.io/cybercore/docs.html">MASTER DOCS ↗</a><cybercore-theme-chooser compact match="header nav a:not(.nav-github)"></cybercore-theme-chooser></nav></div></header>
   <main id="top">
     <section class="hero"><div class="wrap hero-grid"><div><p class="eyebrow">RUST // SYSTEMS INTELLIGENCE // LOCAL FIRST</p><h1>See the machine <span>clearly.</span></h1><p class="hero-copy">Cyberdeck turns hardware, thermals, storage, networking, and system state into one modular intelligence surface—fast enough for a live investigation, structured enough for the next diagnostic.</p><div class="hero-actions"><a class="button" href="#install">Run Cyberdeck <span>↓</span></a><a class="button secondary" href="#domains">Map the stack <span>↘</span></a></div><div class="release"><span>v1.1.0</span><span>·</span><span>Rust 2021 · Tokio · Axum</span></div></div>
       <div class="deck" aria-label="Cyberdeck systems intelligence preview"><div class="deck-head"><span class="bolt">⚡</span><div class="deck-title">cyberdeck // mission control</div><div class="pulse">SYSTEM ONLINE</div></div><div class="deck-tabs"><div class="deck-tab active">overview</div><div class="deck-tab">hardware</div><div class="deck-tab">thermal</div><div class="deck-tab">reports</div></div><div class="deck-body"><div class="deck-nav"><p class="label">dispatch infrastructure scans</p><div class="deck-row active"><i></i> Probe hardware core</div><div class="deck-row"><i></i> Trace network nodes</div><div class="deck-row"><i></i> Audit battery health</div><div class="deck-row"><i></i> Map memory banks</div><div class="deck-row"><i></i> Analyze disk topology</div><div class="deck-row"><i></i> Inspect system daemons</div><div class="deck-row"><i></i> Query mainboard bus</div></div><div class="deck-detail"><p class="label">live system state</p><h3 class="detail-title">Display system</h3><div class="detail-line"><b>status:</b> active</div><div class="detail-line"><b>mode:</b> stealth off</div><div class="detail-line"><b>reports:</b> 0 detected</div><p class="detail-line">thermal headroom</p><div class="meter thermal"><i></i></div><p class="detail-line">storage health</p><div class="meter"><i></i></div><p class="deck-note">Structured output ready for Markdown, JSON, or the next operator.</p><div class="deck-action">› execute module scan</div></div></div><div class="deck-foot"><span><b>ARCH</b> / DEBIAN</span><span><b>LOCAL</b> no telemetry</span><span><b>ASYNC</b> module registry</span></div></div>
